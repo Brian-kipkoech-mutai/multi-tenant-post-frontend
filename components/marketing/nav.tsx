@@ -6,7 +6,12 @@ import { Logo } from '@/components/shared/logo'
 import { Button } from '@/components/ui/button'
 import { ROUTES } from '@/lib/constants'
 
-const NAV_LINKS = ['Product', 'Pricing', 'Integrations', 'Docs'] as const
+const NAV_LINKS = [
+  { label: 'Product', href: '/product' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Integrations', href: '/integrations' },
+  { label: 'Docs', href: '/docs' },
+] as const
 
 export function MarketingNav() {
   return (
@@ -22,13 +27,13 @@ export function MarketingNav() {
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
-          {NAV_LINKS.map((item) => (
+          {NAV_LINKS.map(({ label, href }) => (
             <Link
-              key={item}
-              href="#"
+              key={label}
+              href={href}
               className="text-sm font-medium text-white/60 transition-colors duration-200 hover:text-white"
             >
-              {item}
+              {label}
             </Link>
           ))}
         </nav>
