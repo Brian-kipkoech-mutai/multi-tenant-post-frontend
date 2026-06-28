@@ -5,11 +5,11 @@
  */
 import React from 'react'
 
-type AnyProps = Record<string, unknown> & { children?: React.ReactNode }
+type AnyProps = { children?: React.ReactNode; [key: string]: unknown }
 
 const makeEl = (tag: string) =>
   React.forwardRef<HTMLElement, AnyProps>(({ children, ...props }, ref) =>
-    React.createElement(tag, { ...props, ref }, children),
+    React.createElement(tag, { ...props, ref }, children as React.ReactNode),
   )
 
 export const motion = {
