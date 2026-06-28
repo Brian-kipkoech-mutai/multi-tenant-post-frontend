@@ -14,7 +14,9 @@ apiClient.interceptors.response.use(
   async (error: AxiosError) => {
     const original = error.config as InternalAxiosRequestConfig & { _retry?: boolean }
 
-    if (error.response?.status === 401 && !original?._retry) {
+    // Skip refresh for auth endpoints — a 401 on login/signup is a user error, not a token expiry
+    const isAuthEndpoint = original?.url?.startsWith('/auth/')
+    if (error.response?.status === 401 && !original?._retry && !isAuthEndpoint) {
       original._retry = true
       try {
         await axios.get(`${API_BASE_URL}/auth/refresh-token`, { withCredentials: true })
