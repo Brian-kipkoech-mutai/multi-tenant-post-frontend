@@ -6,6 +6,10 @@ import { Logo } from '@/components/shared/logo'
 import { Separator } from '@/components/ui/separator'
 import { fadeUp, stagger } from '@/lib/animations'
 
+const LINK_HREFS: Record<string, string> = {
+  'Contact': '/contact',
+}
+
 const FOOTER_COLS = [
   {
     title: 'Product',
@@ -13,7 +17,7 @@ const FOOTER_COLS = [
   },
   {
     title: 'Company',
-    links: ['About Dextra', 'Blog', 'Careers', 'Press'],
+    links: ['About Dextra', 'Blog', 'Careers', 'Press', 'Contact'],
   },
   {
     title: 'Legal',
@@ -64,7 +68,7 @@ export function MarketingFooter() {
                 {col.links.map((link) => (
                   <li key={link}>
                     <Link
-                      href="#"
+                      href={LINK_HREFS[link] ?? '#'}
                       className="text-sm text-white/35 transition-colors duration-200 hover:text-white/80"
                     >
                       {link}
