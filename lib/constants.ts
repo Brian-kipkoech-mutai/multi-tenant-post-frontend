@@ -6,6 +6,7 @@ export const APP_TAGLINE = 'The POS platform your shop deserves.'
 
 export const ROUTES = {
   home: '/',
+  about: '/about',
   product: '/product',
   pricing: '/pricing',
   login: '/login',

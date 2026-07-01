@@ -27,10 +27,10 @@ export default function IntegrationsPage() {
         <IntegrationsHero />
 
         <div className="section-divider" />
-        <IntegrationsLiveSection />
+        <IntegrationsAiSection />
 
         <div className="section-divider" />
-        <IntegrationsAiSection />
+        <IntegrationsLiveSection />
 
         <div className="section-divider" />
         <IntegrationsRoadmapSection />

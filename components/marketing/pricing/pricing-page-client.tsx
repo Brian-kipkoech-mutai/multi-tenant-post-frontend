@@ -166,19 +166,11 @@ export function PricingPageClient() {
       <section className="relative flex flex-col items-center justify-center overflow-hidden px-4 pb-12 pt-36 text-center md:px-6">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 h-[650px] w-[650px] -translate-x-1/2 -translate-y-1/3 rounded-full opacity-[0.22]"
-          style={{
-            background: 'radial-gradient(circle, #4f46e5 0%, transparent 65%)',
-            filter: 'blur(100px)',
-          }}
+          className="pointer-events-none absolute left-1/2 top-0 h-162.5 w-162.5 -translate-x-1/2 -translate-y-1/3 rounded-full opacity-[0.22] blur-[100px] [background:radial-gradient(circle,#4f46e5_0%,transparent_65%)]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-1/4 top-1/2 h-[350px] w-[350px] rounded-full opacity-10"
-          style={{
-            background: 'radial-gradient(circle, #7c3aed 0%, transparent 65%)',
-            filter: 'blur(80px)',
-          }}
+          className="pointer-events-none absolute right-1/4 top-1/2 h-87.5 w-87.5 rounded-full opacity-10 blur-[80px] [background:radial-gradient(circle,#7c3aed_0%,transparent_65%)]"
         />
 
         <motion.div
@@ -207,7 +199,7 @@ export function PricingPageClient() {
             variants={reduced ? {} : fadeUp}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/55"
           >
-            Flat monthly plans. M-Pesa transaction fees passed through at Safaricom's rate —{' '}
+            Flat monthly plans. M-Pesa transaction fees passed through at Safaricom&apos;s rate —{' '}
             <span className="font-medium text-white/80">
               we never take a cut of your sales.
             </span>
@@ -231,7 +223,7 @@ export function PricingPageClient() {
             variants={reduced ? {} : fadeUp}
             className="mt-10 flex justify-center"
           >
-            <div className="relative flex items-center rounded-full border border-white/[0.1] bg-white/[0.04] p-1 shadow-inner">
+            <div className="relative flex items-center rounded-full border border-white/10 bg-white/4 p-1 shadow-inner">
               <motion.div
                 className="absolute inset-y-1 rounded-full bg-indigo-600"
                 initial={false}
@@ -292,8 +284,8 @@ export function PricingPageClient() {
                   variants={reduced ? {} : fadeUp}
                   className={`relative flex flex-col rounded-2xl p-7 transition-colors duration-300 ${
                     plan.highlight
-                      ? 'border border-indigo-600/50 bg-gradient-to-b from-indigo-600/12 via-indigo-600/5 to-transparent shadow-[0_0_72px_rgba(79,70,229,0.18)]'
-                      : 'border border-white/[0.07] bg-white/[0.03] hover:border-white/[0.14] hover:bg-white/[0.05]'
+                      ? 'border border-indigo-600/50 bg-linear-to-b from-indigo-600/12 via-indigo-600/5 to-transparent shadow-[0_0_72px_rgba(79,70,229,0.18)]'
+                      : 'border border-white/7 bg-white/3 hover:border-white/[0.14] hover:bg-white/5'
                   }`}
                 >
                   {/* "Most Popular" badge */}
@@ -319,7 +311,7 @@ export function PricingPageClient() {
                   </div>
 
                   {/* Price */}
-                  <div className="mb-6 min-h-[72px]">
+                  <div className="mb-6 min-h-18">
                     {displayPrice !== null ? (
                       <>
                         <div className="flex items-end gap-1">
@@ -438,7 +430,7 @@ export function PricingPageClient() {
                 </span>{' '}
                 and passed through to you at cost. Dextra takes{' '}
                 <strong className="text-white">zero percentage</strong> of your sales. Your
-                customer's payment goes directly from their M-Pesa to your Paybill or Till — not
+                customer&apos;s payment goes directly from their M-Pesa to your Paybill or Till — not
                 through us.
               </p>
             </div>

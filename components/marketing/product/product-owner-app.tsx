@@ -59,7 +59,7 @@ export function ProductOwnerAppSection() {
             04 — Owner Intelligence
           </motion.p>
           <motion.h2 variants={reduced ? {} : fadeUp} className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Know what's happening.
+            Know what&apos;s happening.
             <br />
             Without being there.
           </motion.h2>
@@ -82,7 +82,7 @@ export function ProductOwnerAppSection() {
               <div className="flex items-center justify-between border-b border-white/[0.07] px-5 py-4">
                 <div>
                   <p className="text-xs text-white/35">Westlands Shop</p>
-                  <p className="text-base font-bold text-white">Today's Overview</p>
+                  <p className="text-base font-bold text-white">Today&apos;s Overview</p>
                 </div>
                 <div className="flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3 py-1">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />

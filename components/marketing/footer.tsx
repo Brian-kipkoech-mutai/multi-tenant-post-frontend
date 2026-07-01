@@ -7,7 +7,8 @@ import { Separator } from '@/components/ui/separator'
 import { fadeUp, stagger } from '@/lib/animations'
 
 const LINK_HREFS: Record<string, string> = {
-  'Contact': '/contact',
+  'About Dextra': '/about',
+  Contact: '/contact',
 }
 
 const FOOTER_COLS = [

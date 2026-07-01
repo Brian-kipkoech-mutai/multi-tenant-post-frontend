@@ -167,7 +167,7 @@ export function IntegrationsRoadmapSection() {
             variants={reduced ? {} : fadeUp}
             className="mb-3 text-xs font-semibold uppercase tracking-widest text-violet-400"
           >
-            What's Next
+            What&apos;s Next
           </motion.p>
           <motion.h2
             variants={reduced ? {} : fadeUp}

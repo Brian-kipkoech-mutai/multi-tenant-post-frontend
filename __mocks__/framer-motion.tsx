@@ -7,10 +7,13 @@ import React from 'react'
 
 type AnyProps = { children?: React.ReactNode; [key: string]: unknown }
 
-const makeEl = (tag: string) =>
-  React.forwardRef<HTMLElement, AnyProps>(({ children, ...props }, ref) =>
+const makeEl = (tag: string) => {
+  const El = React.forwardRef<HTMLElement, AnyProps>(({ children, ...props }, ref) =>
     React.createElement(tag, { ...props, ref }, children as React.ReactNode),
   )
+  El.displayName = `motion.${tag}`
+  return El
+}
 
 export const motion = {
   a: makeEl('a'),

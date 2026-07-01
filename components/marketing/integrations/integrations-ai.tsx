@@ -130,7 +130,7 @@ export function IntegrationsAiSection() {
                       </div>
                     ) : (
                       <div className="max-w-[85%] space-y-1.5">
-                        <div className="rounded-2xl rounded-bl-sm bg-white/[0.06] px-4 py-2.5">
+                        <div className="rounded-2xl rounded-bl-sm bg-white/6 px-4 py-2.5">
                           <p className="text-sm leading-relaxed text-white/75">{msg.text}</p>
                         </div>
                         {'stat' in msg && (
@@ -155,7 +155,7 @@ export function IntegrationsAiSection() {
                     <button
                       key={prompt}
                       type="button"
-                      className="rounded-full border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs text-white/40 transition-colors hover:border-indigo-600/30 hover:bg-indigo-600/10 hover:text-indigo-400"
+                      className="rounded-full border border-white/8 bg-white/4 px-3 py-1.5 text-xs text-white/40 transition-colors hover:border-indigo-600/30 hover:bg-indigo-600/10 hover:text-indigo-400"
                     >
                       {prompt}
                     </button>
@@ -201,8 +201,8 @@ export function IntegrationsAiSection() {
                 <Database className="mt-0.5 h-4 w-4 shrink-0 text-indigo-400" aria-hidden="true" />
                 <p className="text-sm text-white/50">
                   <span className="font-semibold text-indigo-400">MCP server</span> — the AI
-                  connects via Anthropic's Model Context Protocol, giving it structured, read-only
-                  access to your analytics endpoints. Your data never leaves Dextra's
+                  connects via Anthropic&apos;s Model Context Protocol, giving it structured, read-only
+                  access to your analytics endpoints. Your data never leaves Dextra&apos;s
                   infrastructure.
                 </p>
               </div>

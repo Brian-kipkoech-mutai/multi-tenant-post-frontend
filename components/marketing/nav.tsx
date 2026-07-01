@@ -7,8 +7,9 @@ import { Button } from '@/components/ui/button'
 import { ROUTES } from '@/lib/constants'
 
 const NAV_LINKS = [
-  { label: 'Product', href: '/product' },
-  { label: 'Pricing', href: '/pricing' },
+  { label: 'About', href: ROUTES.about },
+  { label: 'Product', href: ROUTES.product },
+  { label: 'Pricing', href: ROUTES.pricing },
   { label: 'Integrations', href: '/integrations' },
   { label: 'Docs', href: '/docs' },
 ] as const
